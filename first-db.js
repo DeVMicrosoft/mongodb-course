@@ -113,3 +113,9 @@ db.customers.find().limit(4).sort({lastName: -1})
 db.customers.find().forEach(function(doc) {
   print("Customer Name" + doc.firstName);
 });
+
+// Where
+db.customers.find({ nombre: "Alfredo", edad: 33 })
+
+// Where No
+db.customers.find({ edad: {$ne: 22 }})
